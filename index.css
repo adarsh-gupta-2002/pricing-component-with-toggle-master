@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ 
+
+:root{
+    --very-light-grayish-blue:hsl(240, 78%, 98%);
+    --light-grayish-blue:hsl(234, 14%, 74%);
+    --grayish-blue:hsl(233, 13%, 49%);
+    --dark-grayish-blue:hsl(232, 13%, 33%);
+    --primary-color:linear-gradient(hsl(236, 72%, 79%) , hsl(237, 63%, 64%));
+}
+body{
+    font-size: 15px;
+    color: var(--grayish-blue);
+    text-align: center;
+    background: url('./images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-size: 40%;
+    background-position: 140% 0%;
+    background-color: hsl(216, 71%, 97%);
+}
+
+
+div input{
+    display:  none;
+
+}
+
+/* header */
+header{
+    margin-top: 5em;
+}
+
+
+/* typography */
+h1{
+    font-size: 1.7rem;
+    margin-bottom: 1.2em;
+}
+p{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1.3em;
+    margin: 1.3em 0;
+}
+
+.price{
+    color: var(--dark-grayish-blue);
+    margin-bottom:1em;
+    font-size: 1.8rem;
+    
+    display: flex;
+    justify-content: center;
+    gap:0.2em;
+    align-items: flex-start;
+    
+}
+
+.doller-sign{
+    margin-top: 0.4em;
+ 
+}
+.doller{
+    font-size: 3.7rem;
+     
+     
+}
+
+
+.pricing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 4em;
+}
+.pricing span{
+    font-size: 1rem;
+}
+
+/* toggle button */
+div label{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 36px;
+    background: var(--primary-color);
+    border-radius: 18px;
+    
+}
+
+div label:hover{
+    opacity: 0.5;
+}
+
+div label::before{
+
+    content: '';
+    display: block;
+    width: 26px;
+    height: 25px;
+    background: var(--very-light-grayish-blue );
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+div input:checked + label{
+    background-color: blueviolet;
+}
+
+div input:checked + label::before{
+    left: 30px;
+}
+
+/* card */
+ 
+
+.container{
+ 
+    width: 350px;
+    background-color:#fff;
+    padding: 15px 30px 40px;
+    margin: 0 auto 2em;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 10px rgb(188, 187, 187);
+}
+
+.container ul{
+    list-style: none;
+    margin: 0 auto;
+    
+}
+
+.container ul li{
+    border-top: 2px solid hsla(234, 14%, 74% , 0.4);
+    padding: 1.3em 0;
+}
+.container ul li:last-child{
+    border-bottom:2px solid hsla(234, 14%, 74% , 0.4) ;
+}
+
+/* button */
+button{
+    border: none;
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 1em 0;
+    margin: 3em 0 0;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+
+.primary-btn{
+    background-image: var(--primary-color);
+
+}
+
+.primary-btn:hover{
+    color:hsl(236, 70%, 69%) ;
+    border: 1px solid hsl(236, 70%, 69%);
+    background-color: transparent;
+    background-image: none;
+}
+.secondary-btn{
+    color:hsl(236, 70%, 69%) ;
+}
+
+.secondary-btn:hover{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #fff;
+
+}
+
+.inverse{
+    background-image: var(--primary-color);
+    color: #fff;
+}
+
+.inverse .price{
+    color: #fff;
+}
+
+@media(width>1060px){
+
+    body{
+        background-image: url('./images/bg-top.svg') , url('./images/bg-bottom.svg') ;
+        background-repeat: no-repeat;
+        background-position: 100% 70% , 0% 180%;
+        background-size: 39% , 35%;
+    }
+    .main{
+        
+        display: flex;
+        width: 1056px;
+        align-items: center;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .container.inverse{
+        padding: 15px 30px 40px;
+    }
+    .container{
+        padding: 1px 30px 20px;
+    }
+}

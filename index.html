@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="index.css">
+ 
+</head>
+<body>
+
+  <header>
+    <h1>Our Pricing</h1>
+    <div class="pricing">
+      <span>Annually</span>
+      <div>
+        <input   type="checkbox" id="toggle-btn">
+        <label id="label" for="toggle-btn"></label>
+      </div>
+      <span>Monthly</span>
+    </div>
+  </header>
+  <main class="main">
+
+    <div class="card">
+      <div class="container">
+        <h3>Basic</h3>
+        <p class="price"> <span class="doller-sign">$</span><span class="doller" id="basic">199.99 </span></p>
+        <ul class="services">
+          <li class="service">500 TB Storage</li>
+          <li class="service">2 Users Allowed</li>
+          <li class="service">Send up to 3 GB</li>
+        </ul>
+
+        <button class="btn primary-btn">
+          learn more
+        </button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="container inverse">
+        <h3>Professional</h3>
+        <p class="price"> <span class="doller-sign">$</span>  <span class="doller" id="professional">249.99</span></p>
+        <ul class="services">
+          <li class="service">1 TB Storage</li>
+          <li class="service">5 Users Allowed</li>
+          <li class="service">Send up to 10 GB</li>
+        </ul>
+
+        <button class="btn secondary-btn">
+          learn more
+        </button>
+      </div>
+    </div>
+
+
+    <div class="card">
+      <div class="container">
+        <h3>Master</h3>
+        <p class="price"> <span class="doller-sign">$</span><span class="doller" id="master"> 399.99</span></p>
+        <ul class="services">
+          <li class="service">2 TB Storage</li>
+          <li class="service">10 Users Allowed</li>
+          <li class="service">Send up to 20 GB</li>
+        </ul>
+
+        <button class="btn primary-btn">
+          learn more
+        </button>
+      </div>
+    </div>
+  </main>
+
+  
+  
+  <script src="index.js"></script>
+</body>
+</html>
